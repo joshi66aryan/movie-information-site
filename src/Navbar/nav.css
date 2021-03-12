@@ -1,0 +1,252 @@
+.navstyle {
+	position: fixed;
+	background-color: rgba(0,0,0,0);
+	color: #ffffff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 70px;
+	top: 0;
+	z-index: 99;
+	width: 100%;
+	padding: 0 20px 0 20px;
+}
+
+header .logo {
+	margin: 5px 0 5px 0;
+	margin-right: auto;
+}
+
+header .logo li {
+	list-style: none;
+	text-align: center;
+	font-size: 30px;
+	letter-spacing: -1px;
+	padding: 0 5px 0 5px;
+	border-radius: 3px;
+	color: #fff;
+	background-color: #25523B;
+	outline: none;
+	font-family: "Playfair Display", serif;
+	font-weight: 1000;
+	cursor: default;
+}
+
+header .nav-items {
+	display: flex;
+	margin-right: auto;
+}
+
+header .nav-items li {
+	list-style: none;
+	margin-right: 30px;
+	padding: 6px;
+	border-radius: 3px;
+	font-size: 18px;
+	font-weight: 400;
+	color: #bbb;
+	cursor: pointer;
+}
+
+header .nav-items li:hover {
+	color:  #5AAB61;
+}
+
+header form {
+	display: flex;
+	height: 40px;
+	padding-right: 0;
+	border-radius: 22.5px;
+	min-width: 18% !important;
+	border: 1px solid rgba(155, 155, 155, 0.2);
+}
+
+
+header form .search-data {
+	height: 100%;
+	width: 100%;
+	padding-right:10px;
+	padding-left:20px;
+	color:#bbb;
+	font-weight: 500;
+	border-top-left-radius: 22.5px ;
+	border-bottom-left-radius: 22.5px;
+	background-color: rgba(255,255,255,.2);
+	border: none;
+	font-size: 17px;
+	text-decoration: none;
+}
+header form .search-data::placeholder {
+	color:#bbb;
+}
+header form .search-data:focus ~ header form button {
+	background-color: #fff;
+}
+
+header form button {
+	height: 100%;
+	padding: 8px 20px 8px 10px;
+	background-color: rgba(255,255,255,.2);
+	border-top-right-radius: 22.5px ;
+	border-bottom-right-radius: 22.5px;
+	color: #bbb;
+	border: none;
+	cursor: pointer;
+	font-size: 17px;
+}
+
+header .menu-icon,
+header .search-icon,
+header .cancel-icon {
+	color:rgb(169,169,169);
+	text-align: center;
+	padding: 4px 8px;
+	font-size: calc(1em + 0.6vw);
+	cursor: pointer;
+	display: none;
+}
+
+header .menu-icon span,
+header .search-icon,
+header .cancel-icon {
+	display: none;
+}
+header .dropdown_arrow{
+	margin-left: 20px;
+	font-size: 32px;
+	color:rgb(169,169,169);
+}
+header .account-items{
+	cursor:"pointer";
+	position: absolute;
+	top: 120px;
+	right: 0;
+	list-style: none;
+	transform: translate(-20%, -50%);
+	color:#444 ;
+	font-weight: 450;
+	background-color: #e9ecef;
+	border-radius: 3px;
+	padding:20px;
+	
+}
+
+@media (max-width: 1245px) {
+	header .navstyle {
+		padding: 0 50px;
+	}
+}
+
+@media (max-width: 930px) {
+	header .navstyle {
+		padding: 0;
+	}
+
+	header .logo {
+
+		margin-left: 20px;
+	}
+
+	header .logo li {
+		padding: 0 5px 0 5px;
+		font-size: calc(1em + 1.4vw);
+	}
+
+	header .nav-items {
+		position: fixed;
+		z-index: 99;
+		top: 70px;
+		left: -100%;
+		width: 240px;
+		height: 210px;
+		background:#343a40;
+		display: inline-block;
+		padding: 10px 20px 0 20px;
+		transition: left 0.3s ease;
+		border-radius: 8px;
+	}
+
+	header .nav-items.active {
+		left: 1.8%;
+	}
+
+	header .nav-items li {
+		border-bottom: 0.8px solid #212529;
+		line-height: 20px;
+		margin: 20px 0;
+	}
+
+	header form {
+		position: absolute;
+		top: 65px;
+		right: 68px;
+		opacity: 0;
+		transition: top 0.3s ease, opacity 0.1s ease;
+		box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);
+	}
+
+	header form.active {
+		opacity: 1;
+		top: 80px;
+		pointer-events: auto;
+	}
+
+	header form:before {
+		position: absolute;
+		content: "";
+		top: -13px;
+		right: 0;
+		width: 0;
+		height: 0;
+		z-index: -1;
+		margin: -20px 0 0;
+		border: 10px solid transparent;
+		border-bottom-color: #00acc1;
+	}
+
+	header form:after {
+		position: absolute;
+		content: "";
+		height: 60px;
+		width: calc(100% + 20px);
+		padding: 2px;
+		background: #1e232b;
+		border-radius: 2px;
+		z-index: -2;
+		left: 50%;
+		top: 60%;
+		transform: translate(-50%, -50%);
+		box-shadow: 6px 6px 4px 4px rgba(0, 0, 0, 0.3);
+	}
+
+	header .menu-icon {
+		display: block;
+	}
+
+	header .search-icon,
+	header .menu-icon span {
+		display: block;
+	}
+	header .search-icon.hide {
+		display: none;
+	}
+	header .cancel-icon.show {
+		display: block;
+	}
+
+}
+@media (max-width: 400px) {
+	header form {
+		width: 60%;
+		right: 66px;
+	}
+}
+
+@media (max-width: 300px) {
+	header .logo li {
+		font-size: calc(1em + 1.2vw);
+	}
+	header form {
+		width: 50%;
+	}
+}

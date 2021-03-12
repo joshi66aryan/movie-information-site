@@ -1,0 +1,99 @@
+.main{
+	height: 540px;
+	margin: 0 auto;
+	margin-top:110px;
+	max-width: 1000px;	
+	border-radius: 3px;
+	border-radius: 6px;
+	background-color:#343a40; 
+	box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.3);
+}
+.main > .profile {
+	color: #bbb;
+	max-width:200px;
+	font-weight: 600;
+	font-size: 1.8em;
+	padding-top: 30px;
+	margin-left: 20px;	
+}
+.main > .info {
+	width:90%;
+	margin:0 auto;
+	margin-top: 20px;
+}
+.info >.emailname,
+.info >.username {
+	display: flex;
+	padding-top: 20px;
+	padding-left: 40px;
+}
+.emailname > .email,
+.username > .usernametitle {
+	color: #6c757d;
+	font-size: 20px;
+	cursor:default;
+	padding-left:80px;
+}
+.username > .usernametitle { padding-left:40px; }
+.emailname > .emailitem,
+.username > .usernameitem  {
+	height: 45px;
+	border:none;
+	width: 62.5%;
+	outline: none;
+	color: #6c757d;
+	margin-left: 40px;
+	line-height: 40px;
+	padding-left: 15px;
+	border-radius: 6px;
+	background-color: #212529;
+}
+
+.info > .changetitle {
+	color: #bbb;
+	font-size:20px;
+	cursor:default;
+	font-weight:bold;
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
+.info .flex{ display: flex; }
+.info .flex > .orgpassword {
+	color: #6c757d;
+	cursor:default;
+	font-size: 20px;
+	padding: 20px 0 10px 82px;
+}
+.info .flex > .chngpassword{
+	color: #6c757d;
+	cursor:default;
+	font-size: 20px;
+	padding-left:36px;
+}
+.flex > .orgpasswordfield,
+.flex > .changepasswordfield {	
+	color:#bbb;
+	width: 60%;
+	border:none;
+	height: 45px;
+	outline: none;
+	font-size:16px; 
+	margin-left: 40px;
+	border-radius: 6px;
+	padding-left: 15px;
+	margin-bottom: 20px;
+	background-color: #212529;
+}
+
+.info > .save{
+	color:#bbb;	
+	border:none;
+	height: 40px;
+	margin: auto;
+	width: 100px;
+	outline: none;
+	line-height: 40px;
+	padding-left: 22px;
+	border-radius: 6px;
+	background-color:  #111;
+}

@@ -1,0 +1,100 @@
+.image {	
+	top:0;
+	margin:0;
+	padding: 0;
+	height:100%;
+	z-index: -1;
+	object-fit: contain;
+	background-size: cover;	
+	background-position: center ;
+	background-repeat: no-repeat;
+	background-image:url( wood.jpg);/* movie.jpg, red.jpg, wood.jpg */
+}
+.container {
+	padding-top: 70px;
+	padding-bottom: 24px;
+}
+
+.container >.box{
+	height: 600px;
+	margin: auto;
+	border:none;
+	max-width:500px;
+	border-radius: 4px;
+	box-sizing: border-box;
+	background-color: rgba(0,0,0,.75);
+}
+.box > .signin_contain{ padding:60px 68px 40px 68px; }
+.signin_contain > .signin_tit{
+	color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+.signin_contain .inputfield_box {
+	margin-bottom: 28px;
+	position: relative;
+
+}
+.signin_contain .inputfield_box .inputfield {
+	width: 100%;
+	color:#fff;
+	border:none;
+	height: 55px;
+	outline: none;
+	margin: 0 auto;
+	display: block;
+	font-size: 16px;
+	padding-top: 6px;
+	border-radius: 4px;
+	padding-left: 20px;
+	background-color:#34373e;
+}
+.signin_contain .inputfield_box .label {
+	left: 0;
+	top:11px;
+	color: #8e95a5;
+	font-size: 20px;
+	transition: 0.5s;
+	position: absolute;
+	padding-left: 20px;
+	pointer-events: none;
+}
+.signin_contain .inputfield_box .inputfield:focus ~ .label,
+.signin_contain .inputfield_box .inputfield:valid ~ .label 
+{
+	top: -2px;
+	left: 0;
+	font-size:13px ;
+	padding-top: 4px;
+	font-weight:bold;
+
+}
+.signin_contain .inputfield_box .inputfield:focus,
+.signin_contain .inputfield_box .inputfield:valid {
+	border-bottom: 2px solid #855E42;
+
+}
+
+.submit {	
+	width: 100%;
+	border:none;
+	color: #fff;
+	height: 55px;
+	margin: 0 auto;
+	display: block;
+	padding: 0 20px;
+	cursor: pointer;
+	font-weight: 550;
+	margin-top: 48px;
+	line-height: 50px;
+	font-size: 1.2rem;
+	border-radius: 4px;	
+	margin-bottom: 20px;
+	letter-spacing: 0.2px;
+	background-color:#25523B;		
+}
+.base{ color:  #8e95a5; }
+.help{ margin-left: 160px; }
+.Registerbox{ padding:0px 68px 40px 68px; color:#8e95a5; }
+
