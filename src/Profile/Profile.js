@@ -19,7 +19,7 @@ class Profile extends React.Component {
  	}
 
  	onSubmitPassword = ()=>{
-    fetch('http://localhost:3000/changepassword', {
+    fetch(' https://quiet-cove-71350.herokuapp.com/changepassword', {
       method: 'post',
       headers: {'Content-Type':'application/json'},
       body: JSON.stringify({
